@@ -43,6 +43,29 @@ const shadowHeader = () =>{
 window.addEventListener('scroll', shadowHeader)
 
 /* ================================  CONTACT EMAIL JS ====================== */
+const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    emailjs.sendForm('service_o5axc44','template_x4p1kvd','#contact-form','8PTvW5gEhbkOt8aFL')
+    .then(() => {
+        contactMessage.textContent = 'Message Sent Successfully...✅'
+
+        setTimeout(() => {
+            contactMessage.textContent = ''
+        }, 5000)
+
+        contactForm.reset()
+    }, () => {
+        contactMessage.textContent = 'Message not sent (service error)'
+    })
+}
+contactForm.addEventListener('submit', sendEmail)
+
+
+
 
 
 /* ================================  SHOW SCROLL UP ====================== */
