@@ -99,7 +99,22 @@ const scrollActive = () =>{
 window.addEventListener('scroll', scrollActive)
 
 /* ================================  SCROLL REVEAL ANIMATION ====================== */
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    // reset: true,   ==== animation will repeat
+})
 
+sr.reveal(`.home__content, .footer__container`)
+sr.reveal(`.home__data`, {delay: 300, origin: 'bottom'})
 
+sr.reveal(`.about__content, .contact__content`, {origin: 'bottom'})
+sr.reveal(`.about__image, .contact__form`, {delay: 300})
 
+sr.reveal(`.projects__card`, {interval: 100})
 
+sr.reveal(`.services__card`, {
+    interval: 100,
+    origin: 'bottom'
+})
