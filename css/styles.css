@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&family=Unbounded:wght@200..900&display=swap');
 
 :root{
+    /* 
+    default: hsl(180, 80%, 48%)
+    blue : hsl(220, 90%, 64%)
+    green: hsl(110, 70%, 64%)
+    orange: hsl(15, 80%, 64%)
+    pink: hsl(300, 70%, 64%)
+    purple: hsl(255, 70%, 64%)
+    red: hsl(358, 80%, 64%)
+
+    */
+     
+     
+
+
     --header-height: 3.5rem;
 
     --hue: 180;
